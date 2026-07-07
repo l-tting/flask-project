@@ -25,9 +25,24 @@ git config --global user.email " your email address"
 3.Add files from local folder to my github repo
 **git add .**
 
+4.Commit before final push
+ -> commit: a saved snapshot of your project
+**git commit -m "My first commit"**
 
 
+5.**git push origin main** or 
+  **git push origin master**
+
+  **master / main** -> branches -> 
 
 
+*U* -> untracked
+*A* -> added
+*M* -> modified
+ 
 
-2.Updating existing code on Github
+
+*Updating existing code / repos in Github*
+1.**git add .**
+2.**git commit -m"added a p-tag in index"**
+3.**git push origin master**
