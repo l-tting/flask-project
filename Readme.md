@@ -131,6 +131,38 @@ using functions write code that does the following:
 2.inserts sales data
 
 
+*Data format of data fetched using psycopg2*
+-> Our data from cur.fetchall() is returned in a list of tuples
+list-> contains all rows returned from the database
+tuple -> represents a single row of record
+
+*function* - reusable block of code meant to perform a specific task
+To make functions reusable we use parameters
+*parameters & arguments*
+*parameter* - a placeholder variable meant to make a function reusable
+*argument* - a real value passed in place of a parameter when calling the function
+
+
+*fetching data from two tables*
+
+1.sales per product
+
+
+sales per product -> sales & product name
+sales (products & sales) -> selling_price * quantity -> product name
+
+select products.name as p_name , sum(products.selling_price * sales.quantity) as total_sales from products join sales on sales.pid = products.id group by p_name;
+
+*multiline strings* -> allow us to have strings that traverse more than one line by
+using tripple openinng and closing quotations
+
+*task*
+Using functions write code that fetches the following data:
+    2.sales per day
+    3.profit per product
+    4.profit per day
+
+
 
 
 
