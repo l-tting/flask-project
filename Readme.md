@@ -162,6 +162,63 @@ Using functions write code that fetches the following data:
     3.profit per product
     4.profit per day
 
+*must know* 
+1.SQL - basic queries ,pk & fk , joins , aggregate functions, filter clauses , group by 
+2.Python - data types , data structures(lists and tuples), conditional statements , loops, functions(emphasis)
+
+
+
+*OOP*
+-> Object Oriented Programming : a paradigm / concept where programs are built around 
+classes and objects
+-> We have 2 broad classifications of data types in Python
+1.Inbuilt data types : come with the programming language
+2.user defined / custom data types: -> built using classes and objects
+
+
+*class* - a blueprint / template for creating objects
+*object* - an instance of a class
+
+class -> sketch of the building 
+object -> real building created from the sketch
+
+-> Any class has the following 3 things:
+1.Identity - the unique name of a class
+2.State - defined by attributes of a class
+        -> answers the question: what does a class have?
+        *attribute* - a variable inside a class
+3.Behaviour -> defined by methods of a class 
+        -> answers the question: what can a class do? 
+        *method* - a function inside a class
+
+
+class Car:
+identity -> Car
+state -> make, model, yom, is_imported,colour,no_of_doors
+behaviour -> move, stop , carry goods, 
+
+
+Define the following classes with their identity, state and behavior:
+-> class Student
+      identity -> Student
+      state -> name,age , course
+      behaviour -> study, eat ,sleep, walk
+
+-> class Phone
+-> class Dog
+
+def __init__() -> a constructor
+*Constructor* -> a special method that is automatically called when creating
+objects used to initialize these objects with some data 
+*self* - references an object itself
+*dunder method* -> double underscore methods
+
+
+*task*
+OOP Task 1.Create a class called BankAccount with the following attributes: -account number -balance -owner name -date opened 2.Give the above BankAccount class the following behaviour or methods: -deposit() -withdraw() -display_info() 3.Create two BankAccount objects that can deposit, withdraw and display_info
+
+
+
 
 
 
