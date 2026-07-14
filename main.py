@@ -1,8 +1,5 @@
-x = """
-     This is a sample
-     string
-     using multiline
-     strings
+from flask import Flask
 
-   """
-print(x)
+#Flask instance
+app = Flask(__name__)
+

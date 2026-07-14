@@ -24,11 +24,45 @@ print(person2.age)
 print(person2.gender)
 person2.talks("Hi, this is Python")
 
+from datetime import datetime
+today = datetime.today()
 
 
+class BankAccount:
+    def __init__(self,acc_no,balance,owner_name,date_opened=today):
+        self.acc_no = acc_no
+        self.balance = balance
+        self.owner_name = owner_name
+        self.date_opened = date_opened
 
-
-
-
-    
+    def deposit(self,amount):
+        if amount <= 0:
+            print("Invalid amount entered")
+        else:
+            self.balance += amount
+            print(f"Ksh. {amount} added to {self.acc_no} successfully")
+            print(f"New balance is: {self.balance}")
         
+
+    def withdraw(self,amount):
+        if amount <= 0:
+            print("Invalid amount,cannot complete withdrawal")
+        else:
+            self.balance -= amount
+            print(f"{amount} deducted from {self.acc_no} successfully")
+            print(f"New balance is: {self.balance}")
+        
+
+    def display_info(self):
+        print("--------------Bank Acc Details---------------")
+        print(f"Acc No: {self.acc_no}")
+        print(f"Owner Name: {self.owner_name}")
+        print(f"Balance: {self.balance}")
+        print(f"Date Opened: {self.date_opened}")
+
+
+account1 = BankAccount("Acc001",1000,"Jack Kamau")
+account1.deposit(10_000)
+account1.withdraw(2500)
+account1.display_info()
+       

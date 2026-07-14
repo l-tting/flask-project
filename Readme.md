@@ -218,6 +218,69 @@ objects used to initialize these objects with some data
 OOP Task 1.Create a class called BankAccount with the following attributes: -account number -balance -owner name -date opened 2.Give the above BankAccount class the following behaviour or methods: -deposit() -withdraw() -display_info() 3.Create two BankAccount objects that can deposit, withdraw and display_info
 
 
+**OOP Concepts**
+-> Inheritance -> method overriding
+-> Polymorphism -> method overloading
+-> Abstraction
+-> Encapsulation
+
+
+*FLASK*
+-> A python framework used to build robust web applications
+
+*framework vs library*
+Analogy: Building a house
+
+Scenario 1:
+David intends to build a house.he recognizes that he is not an expert in this field and decides to seek the help of
+professionals(architrect,engineers,construction workers). The process ends up becoming simpler since these experts have
+domain knowledge and experience in this field but David has to do everything exactly as advised by these experts.
+Conclusion: Process is simpler and faster but very strict guidelines must be followed
+----> Framework
+
+Scenario 2:
+Jerry also intends to build a house. He decides not to seek the help of any professional but rather he does everything 
+by himself. The process is much harder but very flexible because he gets to decide what to do at every stage.
+Conclusion: process is much harder but flexible
+-----> Library
+
+*framework* - a prebuilt structure of code and tools used to help developers build applications by making the development
+process much easier where they dont have to build the application from scratch but it enforces very strict guidelines
+that must be followed.
+
+*Examples of frameworks*
+1.Python -> Flask, Django, FastAPI
+2.JavaScript -> React , Angular , Vue, Svelte
+3.Java -> Spring
+4.C# -> .NET
+5.PHP -> Laravel
+6.Go -> Chi, Gin
+7.Ruby -> Ruby on Rails
+
+
+*Flask*
+*Routing in Flask*
+-> Routing is a mechanism that maps or connects urls to Python functions
+*url* -> uniform resource locator -> the full address used to access and application
+e.g. https://meet.google.com/dsh-idtb-oqb
+
+**Parts of a url**
+1.protocol -> tells the browser how to communicate (http or https)
+        *http* -> hypertext transfer protocol (transfers data as raw text)
+        *https* -> hypertext transfer protocol secure (transfers data in encrypted format)
+        *http -> https* -> ssl / tls certificate(free)
+2.domain name -> human friendly name used in place of an ip address
+3.Path/Rule -> specific resource to be accessed in an appliation
+4.Port(optional)
+
+ https://meet.google.com/
+https://meet.google.com/dsh-idtb-oqb
+ 
+
+
+ www.instagram.com/profile
+
+
 
 
 
