@@ -244,9 +244,7 @@ by himself. The process is much harder but very flexible because he gets to deci
 Conclusion: process is much harder but flexible
 -----> Library
 
-*framework* - a prebuilt structure of code and tools used to help developers build applications by making the development
-process much easier where they dont have to build the application from scratch but it enforces very strict guidelines
-that must be followed.
+*framework* - a prebuilt structure of code and tools used to help developers build applications by making the development process much easier where they dont have to build the application from scratch but it enforces very strict guidelines that must be followed.
 
 *Examples of frameworks*
 1.Python -> Flask, Django, FastAPI
@@ -273,16 +271,46 @@ e.g. https://meet.google.com/dsh-idtb-oqb
 3.Path/Rule -> specific resource to be accessed in an appliation
 4.Port(optional)
 
- https://meet.google.com/
-https://meet.google.com/dsh-idtb-oqb
- 
+
+-> Routing in Flask is enabled through the use of a decorator function called @app.route()
+*decorator function* -> a function that determines /modifies the behaviour of another function
+   -> decorator functions in Python are usually preceded by the '@' prefix
+-> our decorator function takes some arguments:
+1.rule / path -> e.g . /, /login ,/profie
+2.methods ---> 
 
 
- www.instagram.com/profile
+https://www.google.com/
 
 
+/ -> index route -> default landing location / page when a user opens an application
 
 
+@app.route("/products") -> *decorator function*
+def products(): -> **view function**
+    return "This is products"
+
+**view function** -> a function meant to execute a specific task in our application and give back
+some response or data
 
 
+app.run() -> a function meant to start your server and run your application
+
+
+N/B: -> View functions cannot share the same name
+
+Instead of returning single pieces of data , we can return full html pages which can the render as much content as we want
+
+To return html pages we must have the following structure
+
+>static : contains all statiic files 
+        : css files, images , videos , icons , favicons
+>templates : contains all html files
+         : a single html file is called a template
+main.py
+database.py
+
+
+To display these html files we use a function called render_template() which is imported
+from flask -> render means return
 
