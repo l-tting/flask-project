@@ -314,3 +314,25 @@ database.py
 To display these html files we use a function called render_template() which is imported
 from flask -> render means return
 
+
+
+*TEMPLATE INHERITANCE*
+-> This is a feature thta enables us reduce redundancy in development by having one parent template (base) that has
+all common features of all pages , then every other html page inherits from the parent template automatically inheriting 
+these common features(navbar and footer)
+-> template inheritance is supported by a Flask feature called  *jinja*
+
+
+
+
+{% block title %} --- a page's title goes here ----{% endblock %}
+
+{% block content %}
+     --- a page's unique content goes here-----
+
+ {% endblock %}
+
+ block title -> defines a block in which we can pass the unique title of each page
+ block content -> defines a block in which we can pass the unique content of each page
+
+ -> to apply template inheritance we use ---> extends base.html in jinja
