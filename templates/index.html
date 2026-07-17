@@ -6,6 +6,16 @@
     
 <p>This is the home page</p>
 
+{{ y }}
+{{ a }}
+{{ numbers }}
+
+{% for i in numbers %}
+      {% if i%2 == 0 %}
+         <h1> {{ i }}</h1>
+     {% endif %}
+{% endfor %}
+
 
 </div>
 {% endblock %}

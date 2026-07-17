@@ -323,8 +323,6 @@ these common features(navbar and footer)
 -> template inheritance is supported by a Flask feature called  *jinja*
 
 
-
-
 {% block title %} --- a page's title goes here ----{% endblock %}
 
 {% block content %}
@@ -336,3 +334,33 @@ these common features(navbar and footer)
  block content -> defines a block in which we can pass the unique content of each page
 
  -> to apply template inheritance we use ---> extends base.html in jinja
+
+ *JINJA*
+ -> A templating engine integrated with Flask to render dynamic html pages.
+ -> It is simply syntax used depending on whether a control structure is used or not
+
+ *control structures*
+ -> building blocks of a language:
+1.Sequence -> a program executes from top to bottom , left to right
+2.Selection -> decision making -> conditional statements
+3.Repitition -> iteration -> loops
+
+*how to use Jinja*
+1.Variables 
+     -> use double curly braces ====> {{ }}
+2.Control structures e.g if statements , for loops, while loops etc
+   -> when using Jinja with control structures , it must have the following parts:
+       => initialization (where does the control structure start)
+       => termination( terminating the control structure)
+    -> we use modulus signs embedded inside curly braces ==> {%    %}
+
+    e.g. 
+     
+     {% if x== 5 %}  -> initialization
+        .............
+     {% endif %} - termination
+
+
+     {% for i in numbers %}
+         ......
+     {% endfor %}
