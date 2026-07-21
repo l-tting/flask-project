@@ -18,10 +18,10 @@ def insert_products(product_values):
     conn.commit()
 
 
-# product1 = ('juice',80,120)
-# product2 = ('charger',1500,2000)
-# insert_products(product1)
-# insert_products(product2)
+product1 = ('juice',80,120)
+product2 = ('charger',1500,2000)
+insert_products(product1)
+insert_products(product2)
 
 # products = get_products()
 # print(products)
