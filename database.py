@@ -49,9 +49,13 @@ def get_stock():
     stock = cur.fetchall()
     return stock
 
+
+
 def insert_stock(stock_values):
     cur.execute("insert into stock(pid,stock_quantity)values(%s,%s)",stock_values)
     conn.commit()
+
+
 
 # stock1 = (1,45)
 # stock2 = (2,40)

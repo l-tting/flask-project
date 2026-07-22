@@ -439,3 +439,28 @@ redirect(url_for('   '))-> pass the name of the view function
 
 *Task*
 -> apply the same procedure to post sales and stock data 
+
+milk -> pid(3)
+
+dropdown menu => shows all available products 
+              => user selects a product they intend to sell or add stock on
+              => the user selects a product by its name hence making it user friendly
+              => but we still pick pid behind the scenes
+100
+
+
+milk -> 3
+
+<select class="form-select" aria-label="Default select example">
+  <option selected>Select Country</option>
+  <option value="ke">Kenya</option>
+  <option value="ug">Uganda</option>
+  <option value="tz">Tanzania</option>
+</select>
+
+<select class="form-select" aria-label="Default select example">
+  <option selected>Select Country</option>
+  <option value="1">Milk</option>
+  <option value="2">Eggs</option>
+  <option value="3">bread</option>
+</select>
