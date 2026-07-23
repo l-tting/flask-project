@@ -1,8 +1,10 @@
-from flask import Flask,render_template,request,redirect,url_for
-from database import get_products,get_sales,get_stock,insert_products,insert_sales,insert_stock
+from flask import Flask,render_template,request,redirect,url_for,flash
+from database import get_products,get_sales,get_stock,insert_products,insert_sales,insert_stock,check_available_stock
 
 #Flask instance
 app = Flask(__name__)
+
+app.secret_key = "89enjdf8i3h88fdhhd993jdhjjhd"
 
 # http://127.0.0.1:5000/products
 @app.route('/') #decorator function
@@ -29,7 +31,7 @@ def add_products():
         new_product = (product_name,buying_price,selling_price)
         
         insert_products(new_product)
-        print("Product added successfully")
+        flash("Product added successfully","success")
     return redirect(url_for('products'))
 
 
@@ -46,9 +48,15 @@ def make_sale():
         pid = request.form['pid']
         quantity = request.form['quantity']
 
+        available_stock = check_available_stock(pid)
+
+        if float(quantity) < available_stock:
+            flash("Insufficient stock",'danger')
+            return redirect(url_for('sales'))
+        
         new_sale = (pid,quantity)
         insert_sales(new_sale)
-        print("Sale made successfully")
+        flash("Sake made successfully","success")
     return redirect(url_for('sales'))
 
 
@@ -60,6 +68,7 @@ def stock():
     return render_template('stock.html',stock_data = stock_data,products_data = products_data)
 
 
+
 @app.route('/add_stock',methods=['GET','POST'])
 def add_stock():
     if request.method == 'POST':
@@ -68,8 +77,9 @@ def add_stock():
 
         new_stock = (pid,quantity)
         insert_stock(new_stock)
-        print("Stock added successfully")
+        flash("Stock added successfully","success")
     return redirect(url_for('stock'))
+
 
 
 
@@ -78,9 +88,11 @@ def dashboard():
     return render_template('dashboard.html')
 
 
+
 @app.route('/register')
 def register():
     return render_template('register.html')
+
 
 
 @app.route('/login')

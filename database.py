@@ -104,3 +104,14 @@ def profit_per_day():
     profit_day = cur.fetchall()
     return profit_day
 
+
+
+def check_available_stock(pid):
+    cur.execute("select sum(stock_quantity) from stock where pid = %s",(pid,))
+    total_stock = cur.fetchone()[0] or 0
+
+    cur.execute("select sum(quantity) from sales where pid = %s",(pid,))
+    total_sold = cur.fetchone()[0] or 0
+
+    return total_stock - total_sold
+
