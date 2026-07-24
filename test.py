@@ -1,6 +1,14 @@
-numbers = [1,2,3,4,5,6,7,8]
+from database import sales_per_product,profit_per_product
 
-for i in numbers:
-    if i %2 == 0:
-        print(i)
+
+sales = sales_per_product()
+profit = profit_per_product()
+
+
+
+
+
+
+
+
 

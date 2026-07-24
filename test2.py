@@ -1,7 +1,10 @@
-from database import get_products
 
-products = get_products()
+even = []
+for i in range(1,21):
+    if i%2 == 0:
+        even.append(i)
+
+print(even)
 
 
-for i in products:
-    print(i[3])
+
